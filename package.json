@@ -1,7 +1,6 @@
 {
   "name": "chatroomkimi",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "dev:front": "parcel serve ./frontend/src/index.html",
@@ -18,6 +17,7 @@
     "express": "^4.18.2",
     "firebase": "^9.21.0",
     "firebase-admin": "^11.7.0",
+    "lodash": "^4.17.21",
     "nodemon": "^2.0.22",
     "parcel": "^2.0.0-rc.0"
   }
