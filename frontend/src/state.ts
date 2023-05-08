@@ -1,5 +1,6 @@
 const API_BASE_URL = "http://localhost:2000";
 import {rtdb} from "./rtdb";
+import {ref, onValue} from "firebase/database";
 import map from "lodash/map";
 
 const state = {
@@ -17,9 +18,9 @@ const state = {
     },
     listenRoom() {
         const cs = this.getState();
-        const chatRoomsRef = rtdb.ref("/rooms/" + cs.rtbRoomId);
+        const chatRoomsRef = ref(rtdb,"/rooms/" + cs.rtbRoomId);
 
-        chatRoomsRef.on("value", snapshot => {
+        onValue(chatRoomsRef, (snapshot)=>{
             const currentState = this.getState();
             const messagesFromServer = snapshot.val();
             console.log(messagesFromServer);
@@ -27,7 +28,7 @@ const state = {
             const messagesList = map(messagesFromServer.messages);
             currentState.messages = messagesList;
             this.setState(currentState);
-        });
+        })
     },
     setEmailAndName(email : string, fullName : string) {
         const currentState = this.getState();
