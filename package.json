@@ -2,6 +2,7 @@
   "name": "chatroomkimi",
   "version": "1.0.0",
   "license": "MIT",
+  "type": "commonjs",
   "scripts": {
     "dev:front": "parcel serve ./frontend/src/index.html",
     "build:front": "parcel build ./frontend/src/index.html",
