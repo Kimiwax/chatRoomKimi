@@ -10,7 +10,7 @@
     "test": "ava",
     "build:api": "tsc",
     "build": "yarn build:front && yarn build:api",
-    "start": "node index.js"
+    "start": "node ./backend/index.js"
   },
   "dependencies": {
     "@vaadin/router": "^1.7.5",
