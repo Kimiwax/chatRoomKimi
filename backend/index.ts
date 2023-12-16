@@ -120,8 +120,8 @@ app.get("*", (req,res) =>{
     res.sendFile(__dirname + "../dist/index.html")
 })
 
-app.get("/", (req, res) => {
-    res.send("el GET esta funcionando");
+app.get("*", (req, res) => {
+    res.send(__dirname + "dist/index.html");
 });
 
 // Abre el puerto a la espera de ordenes
