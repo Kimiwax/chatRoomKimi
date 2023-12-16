@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:2000";
+const API_BASE_URL = "https://kimichatroom.onrender.com";
 import {rtdb} from "./rtdb";
 import {ref, onValue} from "firebase/database";
 import map from "lodash/map";
