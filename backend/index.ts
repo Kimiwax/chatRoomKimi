@@ -116,12 +116,10 @@ app.post("/messages", (req, res) => {
 })
 
 app.use(express.static("dist"));
-app.get("*", (req,res) =>{
-    res.sendFile(__dirname + "../dist/index.html")
-})
+
 
 app.get("*", (req, res) => {
-    res.send(__dirname + "dist/index.html");
+    res.sendFile(__dirname + "dist/index.html");
 });
 
 // Abre el puerto a la espera de ordenes
