@@ -27,6 +27,7 @@ const state = {
 
             const messagesList = map(messagesFromServer.messages);
             currentState.messages = messagesList;
+            
             this.setState(currentState);
         })
     },
