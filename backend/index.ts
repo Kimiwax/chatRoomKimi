@@ -1,6 +1,6 @@
 import {firestore, rtdb} from "./db";
 import * as express from "express";
-import {nanoid} from "nanoid";
+import {nanoid} from "nanoid"
 import * as cors from "cors";
 import * as bodyParser from "body-parser";
 
